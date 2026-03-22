@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Support — Measuro</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --green: #1DB954; --green-dark: #17a349; --green-light: #e8f8ee; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f7faf8; color: #111; min-height: 100vh;
+    }
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 40px; background: #fff; border-bottom: 1px solid #e8ede9;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
+    .nav-logo .icon {
+      width: 40px; height: 40px; border-radius: 10px; background: var(--green);
+      display: flex; align-items: center; justify-content: center; font-size: 22px;
+    }
+    .nav-logo span { font-size: 20px; font-weight: 700; }
+    nav a { font-size: 14px; color: #555; text-decoration: none; }
+    nav a:hover { color: var(--green); }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .btn-nav {
+      background: var(--green); color: #fff !important; padding: 8px 18px;
+      border-radius: 50px; font-weight: 600; font-size: 14px;
+    }
+
+    .page-header {
+      background: var(--green); color: #fff;
+      text-align: center; padding: 60px 24px 48px;
+    }
+    .page-header h1 { font-size: 36px; font-weight: 800; margin-bottom: 8px; }
+    .page-header p { font-size: 15px; opacity: .85; }
+
+    .content {
+      max-width: 720px; margin: 48px auto; padding: 0 24px 64px;
+    }
+
+    /* FAQ */
+    .faq-title {
+      font-size: 22px; font-weight: 800; margin-bottom: 16px;
+    }
+    .faq-item {
+      background: #fff; border-radius: 14px;
+      border: 1px solid #e8ede9; margin-bottom: 10px;
+      overflow: hidden;
+    }
+    .faq-q {
+      padding: 18px 22px; font-size: 15px; font-weight: 600;
+      cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+      user-select: none;
+    }
+    .faq-q:hover { color: var(--green); }
+    .faq-q .arrow { transition: transform .25s; font-size: 13px; color: #aaa; }
+    .faq-q.open .arrow { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height .3s ease, padding .3s ease;
+      font-size: 14px; color: #555; line-height: 1.7;
+      padding: 0 22px;
+    }
+    .faq-a.open { max-height: 300px; padding: 0 22px 18px; }
+
+    /* CONTACT */
+    .contact-card {
+      background: #fff; border-radius: 16px;
+      border: 1px solid #e8ede9; padding: 32px;
+      text-align: center; margin-top: 40px;
+    }
+    .contact-card h2 { font-size: 22px; font-weight: 800; margin-bottom: 10px; }
+    .contact-card p { font-size: 15px; color: #555; margin-bottom: 24px; line-height: 1.6; }
+    .btn-contact {
+      display: inline-block;
+      background: var(--green); color: #fff;
+      padding: 13px 32px; border-radius: 50px;
+      font-size: 15px; font-weight: 700;
+      text-decoration: none;
+      transition: background .2s;
+    }
+    .btn-contact:hover { background: var(--green-dark); }
+
+    footer {
+      text-align: center; padding: 28px 24px;
+      color: #888; font-size: 13px; border-top: 1px solid #e8ede9;
+    }
+    footer a { color: var(--green); text-decoration: none; }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">
+      <div class="icon">📐</div>
+      <span>Measuro</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="https://apps.apple.com/app/id6760968030" class="btn-nav">Download</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1>Support</h1>
+    <p>We're here to help. Find answers below or get in touch.</p>
+  </div>
+
+  <div class="content">
+
+    <p class="faq-title">Frequently asked questions</p>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        How do I convert a unit? <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        Tap a category on the home screen, then tap the unit you want to convert from. Use the built-in keypad to enter a value and all other units will update instantly.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        How do I reorder units? <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        Tap <strong>Edit</strong> in the top-right corner of the converter screen. You can then drag units to your preferred order. Tap <strong>Done</strong> when finished.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        How do I mark a unit as favourite? <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        Tap the star icon on the right side of any unit row. Favourited units are pinned to the top of the list for quick access.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        I purchased "Remove Ads" but ads are still showing. <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        Go to <strong>Settings → Premium → Restore purchases</strong> inside the app. This will verify your purchase with Apple and remove all ads. Make sure you are signed in with the same Apple ID used to purchase.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        How do I restore my purchase on a new device? <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        Open the app, go to <strong>Settings → Premium → Restore purchases</strong>. Sign in with the same Apple ID and your purchase will be restored at no extra cost.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        Is Measuro available on iPad or Mac? <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        Measuro is currently available for iPhone only. iPad and Mac support may come in a future update.
+      </div>
+    </div>
+
+    <div class="contact-card">
+      <h2>Still need help?</h2>
+      <p>Can't find what you're looking for? Send us an email and we'll get back to you as soon as possible.</p>
+      <a href="mailto:support@measuro.app" class="btn-contact">✉ Contact support</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="https://apps.apple.com/app/id6760968030">App Store</a>
+    </div>
+    <p>© 2026 Measuro. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggle(el) {
+      el.classList.toggle('open');
+      const ans = el.nextElementSibling;
+      ans.classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
